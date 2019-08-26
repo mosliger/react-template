@@ -6,9 +6,7 @@ import App from './App';
 
 import * as serviceWorker from './serviceWorker';
 
-import configureStore from './stories/configureStore';
-
-import 'babel-polyfill';
+import configureStore from './configureStore';
 
 import './styles/index.scss';
 
