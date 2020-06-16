@@ -13,6 +13,7 @@ import './styles/index.scss';
 const initialState = {};
 const store = configureStore(initialState);
 
+
 ReactDOM.render(
   <Provider store={store} key="provider">
     <App />

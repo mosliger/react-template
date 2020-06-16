@@ -4,17 +4,17 @@ FROM node:lts-alpine as build-react
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-RUN npm i -g yarn
+COPY package*.json ./
 
-COPY package*.json yarn.lock ./
-
-RUN yarn
+RUN npm install
 
 COPY . .
 
-RUN yarn build
+RUN npm run build
 
 # stage: 2 — serve react with nginx
 FROM nginx:1.17.8-alpine
 
 COPY --from=build-react /usr/src/app/build /usr/share/nginx/html
+
+COPY  nginx/conf.d /etc/nginx/conf.d
