@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "dotenv-cli": "^4.0.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
